@@ -1,10 +1,38 @@
 ## Collection of our beloved SHELL functions.
 
-### PR Guidelines:
-<details>
-<summary>Format:</summary>
-This is how you dropdown.
-</details>
+### PR Guidelines :
+<ul>
+  <li>
+    <details>
+      <summary>Code Template :</summary>
+      <pre>Use below template and add it to specific section in README</pre>
+      <ul>
+        <pre>
+        &lt;li&gt;
+          &lt;details&gt;
+            &lt;summary&gt; function name : short description &lt;/summary&gt;
+            &lt;br&gt;
+            &lt;pre&gt;SHELL: BASH/FISH/ZSH&lt;/pre&gt;
+            &lt;pre&gt;USAGE: how you use the function&lt;/pre&gt;
+            &lt;ul&gt;
+              &lt;li&gt;
+                &lt;pre&gt;
+                  Your Code goes here ...
+                &lt;/pre&gt;
+              &lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/details&gt;
+        &lt;/li&gt;
+        </pre>
+      </ul>
+    </details>
+  </li>
+  <li>
+    Commit msg: <pre>function_name: short description</pre>
+  </li>
+</ul>
+
+
 
 ### License:
 ```
