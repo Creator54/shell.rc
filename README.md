@@ -34,6 +34,37 @@
 
 ### Functions :
 <ul>
+  <li>
+    <details>
+      <summary> v : for viewing files in general.</summary>
+      <br>
+      <pre>SHELL: Fish</pre>
+      <pre>USAGE: v anyfile</pre>
+      <ul>
+        <li>
+          <pre>
+            function v
+              if [ -z "$argv" ]
+                echo "Do pass a file to view !"
+              else if [ -d "$argv" ]
+                echo Files Count: (count $argv/*); ls -sh $argv
+              else if string match -r ".jpg|.png|.svg" $argv &> /dev/null
+                kitty +kitten icat $argv
+              else if string match -r ".mp4|.mkv|.mp3" $argv &> /dev/null
+                mpv $argv
+              else if string match -q "*.docx" $argv
+                catdocx $argv | bat
+              else if string match -q "*.pdf" $argv
+                zathura $argv &> /dev/null
+              else
+                bat $argv
+              end
+            end
+          </pre>
+        </li>
+      </ul>
+    </details>
+  </li>
 </ul>
 
 
